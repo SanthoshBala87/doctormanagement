@@ -10,6 +10,7 @@ const receivedDoctorPhoneNumber = document.querySelector(
   "#received-doctor-phone-number",
 );
 
+
 const resetButton = document.querySelector("#reset-button");
 const submitButton = document.querySelector("#submit-button");
 
