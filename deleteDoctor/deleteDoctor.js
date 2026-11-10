@@ -17,8 +17,8 @@ const doctorIdError = document.querySelector(".doctor-id-error");
 const getDetails = document.querySelector("#get-doctor-details");
 getDetails.addEventListener("click", getId);
 function getId() {
-    displayNone(successMessage);
-    displayNone(addDataSection);
+  displayNone(successMessage);
+  displayNone(addDataSection);
   getDetails.disabled = true;
   const errors = {};
   if (validateId(errors)) {
@@ -49,7 +49,9 @@ function setIdError(errors) {
 
 async function getDoctorData() {
   const id = doctorId.value.trim().split("DID")[1];
-  const response = await fetch(`http://localhost:8080/api/doctor/${id}`);
+  const response = await fetch(
+    `https://doctor-management-api-7u18.onrender.com/api/doctor/${id}`,
+  );
   if (!response.ok) {
     const error = await response.json();
     displayNone(addDataSection);
@@ -74,16 +76,19 @@ function setDoctorData(data) {
 
 deleteDoctor.addEventListener("click", deleteDoctorDetails);
 async function deleteDoctorDetails() {
-    deleteDoctor.disabled=true;
+  deleteDoctor.disabled = true;
   displayNone(addDataSection);
   try {
     const id = doctorId.value.trim().split("DID")[1];
-    const response = await fetch(`http://localhost:8080/api/doctor/${id}`, {
-      method: "DELETE",
-      headers:{
-        "Content-Type":"application/json"
-      }
-    });
+    const response = await fetch(
+      `https://doctor-management-api-7u18.onrender.com/api/doctor/${id}`,
+      {
+        method: "DELETE",
+        headers: {
+          "Content-Type": "application/json",
+        },
+      },
+    );
     if (!response.ok) {
       return;
     }

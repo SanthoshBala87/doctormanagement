@@ -1,6 +1,6 @@
 import * as doctorValidation from "../utilities/doctorValidation.js";
 
-const API_URL = "http://localhost:8080/api/doctor";
+const API_URL = "https://doctor-management-api-7u18.onrender.com/api/doctor";
 
 const receivedDoctorId = document.querySelector("#received-doctor-id");
 const receivedDoctorName = document.querySelector("#received-doctor-name");

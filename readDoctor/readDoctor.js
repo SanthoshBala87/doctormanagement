@@ -1,4 +1,4 @@
-const API_URL = "http://localhost:8080/api/doctor";
+const API_URL = "https://doctor-management-api-7u18.onrender.com/api/doctor";
 
 const message = document.querySelector(".message");
 const errorMessage = document.querySelector(".error-message");

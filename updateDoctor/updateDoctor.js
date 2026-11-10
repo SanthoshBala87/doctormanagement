@@ -49,7 +49,9 @@ function setIdError(errors) {
 
 async function getDoctorData(){
     const id = doctorId.value.trim().split("DID")[1];
-    const response=await fetch(`http://localhost:8080/api/doctor/${id}`);
+    const response = await fetch(
+      `https://doctor-management-api-7u18.onrender.com/api/doctor/${id}`,
+    );
     if(!response.ok){
         const error=await response.json();
         doctorValidation.displayBlock(doctorIdError);
@@ -96,13 +98,16 @@ async function editDoctorDetails() {
   doctorValidation.displayNone(addDataSection);
   try {
     const id = doctorId.value.trim().split("DID")[1];
-    const response = await fetch(`http://localhost:8080/api/doctor/${id}`, {
-      method: "PUT",
-      headers: {
-        "Content-Type": "application/json",
+    const response = await fetch(
+      `https://doctor-management-api-7u18.onrender.com/api/doctor/${id}`,
+      {
+        method: "PUT",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(doctorData()),
       },
-      body: JSON.stringify(doctorData()),
-    });
+    );
     if (!response.ok) {
       const error = await response.json();
       doctorValidation.assignErrors(error);
