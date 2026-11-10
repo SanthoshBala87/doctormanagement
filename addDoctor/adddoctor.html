@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./adddoctor.css">
+        <title>Add Doctor</title>
+    </head>
+    <body>
+        <header>
+            <h1>Add Doctor</h1>
+        </header>
+        <main>
+            <section class="doctor-details">
+                <section class="doctor-name">
+                    <label for="doctor-name">Name</label>
+                    <input type="text" id="doctor-name" name="doctorName" required autocomplete="on">
+                </section>
+                <p class="doctor-name-error"></p>
+            </section>
+
+            <section class="doctor-details">
+                <section class="doctor-email">
+                    <label for="doctor-email">Email</label>
+                    <input type="email" id="doctor-email" name="doctorEmail" required autocomplete="on">
+                </section>
+                <p class="doctor-email-error"></p>
+            </section>
+
+            <section class="doctor-details">
+                <section class="doctor-age">
+                    <label for="doctor-age">Age</label>
+                    <input type="number" id="doctor-age" name="doctorAge" required autocomplete="on">
+                </section>
+                <p class="doctor-age-error"></p>
+            </section>
+
+            <section class="doctor-details">
+                <section class="doctor-phone-number">
+                    <label for="doctor-phone-number">Phone Number</label>
+                    <input type="tel" id="doctor-phone-number" name="doctorName" required autocomplete="on">
+                </section>
+                <p class="doctor-phone-number-error"></p>
+            </section>
+
+            <section class="doctor-details buttons">
+                <button type="reset" id="reset-button">Reset</button>
+                <button type="submit" id="submit-button">Submit</button>
+            </section>
+
+            <section class="add-data">
+                <table id="data-table">
+                    <caption>Doctor data added successfully </caption>
+                    <tbody >
+                        <tr>
+                            <th>Id</th>
+                            <td id="received-doctor-id"></td>
+                        </tr>
+                        <tr>
+                            <th>Name</th>
+                            <td id="received-doctor-name"></td>
+                        </tr>
+                        <tr>
+                            <th>Email</th>
+                            <td id="received-doctor-email"></td>
+                        </tr>
+                        <tr>
+                            <th>Age</th>
+                            <td id="received-doctor-age"></td>
+                        </tr>
+                        <tr>
+                            <th>Phone Number</th>
+                            <td id="received-doctor-phone-number"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <section class="error-data">
+                <table id="error-table">
+                    <tbody>
+                        <tr>
+                            <th>Timestamp</th>
+                            <td id="timestamp"></td>
+                        </tr>
+                        <tr>
+                            <th>Status</th>
+                            <td id="status"></td>
+                        </tr>
+                        <tr>
+                            <th>Error Code</th>
+                            <td id="error-code"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+        </main>
+        <footer>
+            <p><span>&copy;</span> Designed and developed by Balasanthosh</p>
+        </footer>
+
+        <script type="module" src="../utilities/doctorValidation.js"></script>
+        <script type="module" src="./adddoctor.js"></script>
+    </body>
+</html>

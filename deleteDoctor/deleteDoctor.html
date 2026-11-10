@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./deleteDoctor.css">
+        <title>Delete Doctor</title>
+    </head>
+    <body>
+        <header>
+            <h1>Delete Doctor</h1>
+        </header>
+        <main>
+            <section class="doctor-details">
+                <section class="doctor-id">
+                    <label for="doctor-id">Id</label>
+                    <input type="text" id="doctor-id" name="doctorId" required autocomplete="on" value="DID">
+                </section>
+                <button type="button" id="get-doctor-details">Get doctor Details</button>
+                <p class="doctor-id-error"></p>
+            </section>
+
+            <section class="add-data">
+                <table id="data-table">
+                    <caption>Doctor data</caption>
+                    <tbody >
+                        <tr>
+                            <th>Id</th>
+                            <td id="received-doctor-id"></td>
+                        </tr>
+                        <tr>
+                            <th>Name</th>
+                            <td id="received-doctor-name"></td>
+                        </tr>
+                        <tr>
+                            <th>Email</th>
+                            <td id="received-doctor-email"></td>
+                        </tr>
+                        <tr>
+                            <th>Age</th>
+                            <td id="received-doctor-age"></td>
+                        </tr>
+                        <tr>
+                            <th>Phone Number</th>
+                            <td id="received-doctor-phone-number"></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <button type="button" id="delete-doctor">Delete</button>
+            </section>
+            
+            <section>
+                <p class="success-message">Doctor data deleted succeessfully </p>
+            </section>
+        </main>
+        <footer>
+            <p><span>&copy;</span> Designed and developed by Balasanthosh</p>
+        </footer>
+
+        <script type="module" src="./deleteDoctor.js"></script>
+    </body>
+</html>
